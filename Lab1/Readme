@@ -1,0 +1,15 @@
+Lab 1: 
+
+Objectives: 
+
+  1. successfully reads all lines of the input file
+  2. calculate the average price per brand, average price per category
+  3. writes to an output file
+  4. for each unique year, list the count of skus and also print out the skus as a list i.e. 2000 (3): 111, 211, 311 and make a new line per year
+  
+  
+  
+  Run: To run type 
+  
+  make lab1
+  ./lab1
