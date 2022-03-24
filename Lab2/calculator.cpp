@@ -1,67 +1,73 @@
-#include <iostream>
-#include <cmath>
+//Omar Khilji
+//CISC 3142
+//Lab 2 
 
-enum class operation { Add, Subtract, Multiply, Divide ,Squareroot};
+#include <cmath>
+#include <iostream>
+
+enum class Operation { Add, Subtract, Multiply, Divide, Squareroot };
 
 struct Calculator {
-operation op;
-Calculator(operation operation) { op = operation; }
+  Operation op;
+  Calculator(Operation operation) { op = operation; }
 
-int calculate(int a, int b) {
-switch (op) {
-case operation::Add: {
-return a + b;
-} break;
-case operation::Subtract: {
-return a - b;
-} break;
-case operation::Multiply: {
-return a * b;
-} break;
-case operation::Divide: {
-return a / b;
-} break;
 
-case operation::Squareroot:{
+  int calculate(int a, int b) {
+    switch (op) {
+    case Operation::Add: {        //here we add the two numbers 
+      return a + b;
+    } break;
+    case Operation::Subtract: {    //here we subtract the two numbers 
+      return a - b;
+    } break;
+    case Operation::Multiply: {  //here we multiply the two numbers
+      return a * b;
+    } break;
+    case Operation::Divide: {  // here we divide the two numbers 
+      return a / b;
+    } break;
 
-return sqrt(a);
-default: {
-std::cout << "Error: invalid!\n";
-return 0;
-}
+    case Operation::Squareroot: {   // here we take the squareroot action 
 
-}
-}
-}
+      return sqrt(a);
+    default: {
+      std::cout << "Error: invalid!\n";
+      return 0;
+    }
+    }
+    }
+  }
 };
 
-int main() {
-int num1, num2;
-std::string operation;
-std::cout << "Please the first integer.\n";
-std::cin >> num1;
-std::cout << "Please provide the second integer(If using Squareroot, then please use same as first integer).\n";
-std::cin >> num2;
-std::cout << "What type of operation do you want to perform? (Add, Subtract, Multiply, Divide, or Squareroot)\n";
-std::cin >> operation;
+int main() {                       //main program 
+  int num1, num2;
+  std::string operation;
+  std::cout << "Integer 1.\n";
+  std::cin >> num1;
+  std::cout << "Integer 2 (Note: Using Squreroot function please keep both "
+               "integers value the same.\n";
+  std::cin >> num2;
+  std::cout << "What type of operation do you want to perform? (Add, Subtract, "
+               "Multiply, Divide)\n";
+  std::cin >> operation;
 
-operation op{};
+  Operation op{};
 
-if (operation == "Add") {
-op = operation::Add;
-} else if (operation == "Subtract") {
-op = operation::Subtract;
-} else if (operation == "Multiply") {
-op = operation::Multiply;
-} else if (operation == "Divide") {
-op = operation::Divide;
+  if (operation == "Add") {       //checking user operation
+    op = Operation::Add;
+  } else if (operation == "Subtract") {
+    op = Operation::Subtract;
+  } else if (operation == "Multiply") {
+    op = Operation::Multiply;
+  } else if (operation == "Divide") {
+    op = Operation::Divide;
 
-}else if (operation == "Squareroot" ){
+  } else if (operation == "Squareroot") {
 
-op = operation::Squareroot;
-}
+    op = Operation::Squareroot;
+  }
 
-Calculator calc(op);
-auto answer = calc.calculate(num1, num2);
-std::cout << answer << "\n";
+  Calculator calc(op);
+  auto answer = calc.calculate(num1, num2);
+  std::cout << answer << "\n";
 }
