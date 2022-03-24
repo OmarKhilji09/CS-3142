@@ -1,0 +1,20 @@
+This program aims to solve calculator operations such as Addition, subtraction, multiplication, division, and finding the squareroot.
+
+
+To Run: 
+
+1. Make sure you are in the correct repository
+2. Type in your terminal: Make Lab2
+3. You are all set!
+
+
+I used C++, using object-oriented techniques. 
+
+The logic implemented into the program includes 
+
+Addition
+Subtraction
+Multiplication
+Division
+Squareroot
+
