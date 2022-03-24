@@ -48,7 +48,7 @@ int main() {                       //main program
                "integers value the same.\n";
   std::cin >> num2;
   std::cout << "What type of operation do you want to perform? (Add, Subtract, "
-               "Multiply, Divide)\n";
+               "Multiply, Divide or Sqaureroot)\n";
   std::cin >> operation;
 
   Operation op{};
